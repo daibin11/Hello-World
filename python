@@ -1,0 +1,14 @@
+＃python3输出一个列表的最值
+def findMinAndMax(L):
+    if L == []:
+        return None,None
+    else:
+        min=L[0]
+        max=L[0]
+    for a in L:
+        min = a if min > a else min
+        max = a if max < a else max
+    return (min,max)
+print('请输入一个数组')
+num = [int(n) for n in input().split()]
+print('asda\n',findMinAndMax(num))
